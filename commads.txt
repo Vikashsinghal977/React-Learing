@@ -1,0 +1,8 @@
+1. Install React App -> npx create-react-app <Folder_Name>     ->   npx create-react-app frontend
+    a. if you Want to install global Than than write simple this create-react-app frontend
+
+2. Open Folder -> code  .<Folder_Name>    -> code .\frontend\
+
+3. Start App -> npm start
+
+4 Install npm i react-router-dom

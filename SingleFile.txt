@@ -1,0 +1,44 @@
+// import logo from './logo.svg';
+import { Component } from 'react';
+import './App.css';
+
+
+function Mycomponents({classforName, name, income = 10}) {
+  return (
+    <>
+
+      <hr />
+      <div className={classforName}>
+        {/* <hr /> */}
+      {name} : ${income}
+      </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      hello 
+      <Mycomponents name={"vikash"} classforName={"div1"} income={500} /> 
+      <Mycomponents name={"Arjun"} classforName={"div2"} income={300} /> 
+      <Mycomponents name={"Abhi"} classforName={"div3"} income={22200} /> 
+       Word
+
+    </div>
+  );
+}
+
+
+
+
+
+// function Mycomponents(props) {
+//   return (
+//     <div className={props.classforName}>
+//       {props.name}
+//     </div>
+//   );
+// }
+
+export default App;

@@ -1,0 +1,132 @@
+# components Basicly is use in a react 
+
+    Ex- 1 ->
+        function App() {
+            return (
+                <div>
+                hello Word
+                </div>
+            );
+        }
+
+    Ex- 2 -> 
+        function MyCommponets() {
+            return (
+                <div>
+                hello Word
+                </div>
+            );
+        }
+
+
+# Propes is a Special keyword that stand the properties and its use a passing data from one component to another.
+
+    ex -> 
+
+        function Mycomponents(props) {
+            return (
+                <div className={props.classforName}>
+                {props.name}
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                hello 
+                <Mycomponents name={"vikash"} classforName={"div1"}/> 
+                <Mycomponents name={"Arjun"} classforName={"div2"}/> 
+                <Mycomponents name={"Abhi"} classforName={"div3"}/>  Word
+
+                </div>
+            );
+        }
+
+but 
+
+# if you don't want to use a propes than you can use a destructure concept this is a concept of Javascript 
+
+    ex ->
+
+        function Mycomponents({classforName, name}) {
+            return (
+                <div className={classforName}>
+                {name}
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                hello 
+                <Mycomponents name={"vikash"} classforName={"div1"}/> 
+                <Mycomponents name={"Arjun"} classforName={"div2"}/> 
+                <Mycomponents name={"Abhi"} classforName={"div3"}/>  Word
+
+                </div>
+            );
+        }
+
+
+# if i want add a income add on this if you want to add a default income than you can use a simple add value in a components perameter link this 
+
+    ex ->
+
+        function Mycomponents({classforName, name, income = 10}) {
+            return (
+                <div className={classforName}>
+                {name} : ${income}
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                hello 
+                <Mycomponents name={"vikash"} classforName={"div1"} income={500} /> 
+                <Mycomponents name={"Arjun"} classforName={"div2"} income={300} /> 
+                <Mycomponents name={"Abhi"} classforName={"div3"}  />  Word
+
+                </div>
+            );
+        }
+
+# fragment is a feature to allows you to retrun multiple elements from a react component by allowing group a list of children without adding extra nodes to the DOM. DOM is a document Object model 
+
+How to use it ....You can yous a Simple lessThan or GraterThan brackets like this <></>
+
+    ex -> 
+
+        <>
+
+            <hr />
+            <div className={classforName}>
+                {/* <hr /> */}
+            {name} : ${income}
+            </div>
+        </>
+
+# If you want to export More then one File then you can use a simple this 
+
+    ex ->
+
+        export {heder , Heder2};
+
+        import {heder, Heder2} from './Folder_Name'
+
+# If you want to Also add default on same file can you can use this 
+
+    ex ->
+
+        export {header1, header2}
+
+            export default main;
+
+        import { header1, header2 } from './components/header';
+        
+            import Header from './components/header';
+
+
